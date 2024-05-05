@@ -16,8 +16,10 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/icons-material": "^5.15.16",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.16",
+    "framer-motion": "^11.1.7",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"

@@ -1,6 +1,9 @@
-import { faTwitter, faGithub, faHtml5, faCss3Alt, faJsSquare, faPython, faReact, faUnity, faFigma, faWebAwesome, faLine } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faGithub, faHtml5, faCss3Alt, faJsSquare, faPython, faReact, faUnity, faFigma, faLine } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faFolder } from '@fortawesome/free-regular-svg-icons';
-import { faGamepad, faLinkSlash, faList, faPencil } from '@fortawesome/free-solid-svg-icons';
+import { faGamepad, faList, faPencil } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
+
 
 export const socialLinks = [
     { icon: faTwitter, url: 'https://twitter.com/just_for_ToB', label: 'Twitter' },
@@ -32,56 +35,113 @@ export const projectData = [
     {
         title: '新美のポートフォリオ',
         icon: faFolder,
-        description: '新美のポートフォリオサイト．Next.jsを使用．',
-        gitHubLink: '',
-        label: 'Website'
+        description: `新美のポートフォリオサイト。`,
+        gitHubLink: '404',
+        label: 'Website',
+        skills: [
+            <FontAwesomeIcon icon={faReact} />,
+            <FontAwesomeIcon icon={faHtml5} />,
+            <FontAwesomeIcon icon={faCss3Alt} />,
+            <FontAwesomeIcon icon={faJsSquare} />,
+            <Image className='my-2' src='./svg/next.svg' width={50} height={50} alt='next' />,
+        ],
     },
     {
         title: '食べログ検索LINEボット',
         icon: faLine,
-        description: '食べログAPIを使用したLINEボット．現在地周辺の店舗情報取得やキーワード検索に対応．',
+        description: `食べログAPIを使用したLINEボット。
+        現在地周辺の店舗情報取得やキーワード検索に対応。`,
         gitHubLink: 'https://github.com/Niimijpn/LineBot_Tabelog',
-        label: 'LineBOT'
+        label: 'LineBOT',
+        skills: [
+            <FontAwesomeIcon icon={faJsSquare} />,
+            <Image className='' src='./svg/messagingapi.svg' width={30} height={30} alt='line-messaging-api' />,
+            
+        ],
     },
     {
         title: 'ARお絵描き',
         icon: faPencil,
-        description: 'MediaPipeを使用したお絵描きアプリ．画像認識により指の位置情報を取得．指をペンと見立てることでお絵描きを実現．UNDOや消しゴム，描画色・線の編集機能等も実装．',
+        description: `MediaPipeを使用したお絵描きアプリ。
+        画像認識により指の位置情報を取得。
+        指をペンと見立てることでお絵描きを実現。
+        UNDOや消しゴム、描画色・線の編集機能等も実装。`,
         gitHubLink: 'https://github.com/Niimijpn/gesture',
-        label: 'DrawingApp'
+        label: 'DrawingApp',
+        skills: [
+            <FontAwesomeIcon icon={faPython} />,
+            <Image className='' src='./svg/mediapipe.svg' width={25} height={25} alt='line-messaging-api' />,
+        ],
     },
     {
         title: 'カンバンリスト',
         icon: faList,
-        description: 'カンバン式のToDoリスト．自分専用のセカンドブレインが欲しくて開発．p5.jsで作成した時計やメモスペースも実装．',
+        description: `カンバン式のToDoリスト。
+        自分専用のセカンドブレインが欲しくて開発。
+        p5.jsで作成した時計やメモスペースも実装。`,
         gitHubLink: 'https://github.com/Niimijpn/kanban',
-        label: 'Kanban'
+        label: 'Kanban',
+        skills: [
+            <FontAwesomeIcon icon={faHtml5} />,
+            <FontAwesomeIcon icon={faCss3Alt} />,
+            <FontAwesomeIcon icon={faJsSquare} />,
+        ],
     },
     {
-        title: 'Contents Creation Circleのウェブサイト',
+        title: 'サークルのウェブサイト',
         icon: faFolder,
-        description: '自身が所属するサークルのウェブサイト．入学式に向けてウェブサイトが欲しいと頼まれ，個人で開発．Next.jsを使用．',
+        description: `自身が所属するサークルのウェブサイト。
+        入学式に向けてウェブサイトが欲しいと頼まれ、個人で開発。`,
         gitHubLink: 'https://github.com/CC-Circle/ccc-web',
-        label: 'Website'
+        label: 'Website',
+        skills: [
+            <FontAwesomeIcon icon={faHtml5} />,
+            <FontAwesomeIcon icon={faCss3Alt} />,
+            <FontAwesomeIcon icon={faJsSquare} />,
+            <FontAwesomeIcon icon={faReact} />,
+            <Image className='my-2' src='./svg/next.svg' width={50} height={50} alt='next' />,
+        ],
     },
     {
         title: 'キューブでポン！',
         icon: faGamepad,
-        description: 'ルービックキューブがコントローラーの新感覚パズルゲーム．ルービックキューブの普及を目的として作成．実際のルービックキューブと画面上の色を合わせることでスコアを獲得．BitSummit2023，Tokyo Game Show2023に出展．',
-        gitHubLink: ''
+        description: `ルービックキューブがコントローラーの新感覚パズルゲーム。
+        ルービックキューブの普及を目的として作成。
+        実際のルービックキューブと画面上の色を合わせることでスコアを獲得。
+        BitSummit2023，Tokyo Game Show2023に出展．`,
+        gitHubLink: '',
+        skills: [
+            <FontAwesomeIcon icon={faUnity} />,
+            <Image className='my-1' src='./svg/c-sharp.svg' width={15} height={15} alt='c#' />,
+            <FontAwesomeIcon icon={faFigma} />,
+        ],
     },
     {
         title: '天空から目薬',
         icon: faGamepad,
-        description: '目薬をコントローラーとしたゲーム．「ブラック企業で働く社員の疲れた目を天空から目薬を落として癒やせ！」がコンセプト．2024年のサークル勧誘のために制作．',
+        description: `目薬をコントローラーとしたゲーム。
+        「ブラック企業で働く社員の疲れた目を天空から目薬を落として癒やせ！」がコンセプト。
+        2024年のサークル勧誘のために制作。`,
         gitHubLink: 'https://github.com/otakumi-bekon/eye_drop',
-        label: 'Game'
+        label: 'Game',
+        skills: [
+            <FontAwesomeIcon icon={faUnity} />,
+            <Image className='my-1' src='./svg/c-sharp.svg' width={15} height={15} alt='c#' />,
+            <FontAwesomeIcon icon={faFigma} />,
+        ],
     },
     {
         title: '地球帰還',
         icon: faGamepad,
-        description: 'スマホのジャイロセンサを使用してプレイヤーを操作するゲーム．「宇宙船を操作して地球へ帰還！宇宙空間に散らばる障害物を避けて無事地球に着陸で来るか！」がコンセプト．サークルのゴールデンウィーク企画として個人で制作．',
+        description: `スマホのジャイロセンサを使用してプレイヤーを操作するゲーム．
+        「宇宙船を操作して地球へ帰還！宇宙空間に散らばる障害物を避けて無事地球に着陸で来るか！」がコンセプト。
+        サークルのゴールデンウィーク企画として個人で制作。`,
         gitHubLink: 'https://github.com/CC-Circle/GW2024_Niimi',
-        label: 'Game'
+        label: 'Game',
+        skills: [
+            <FontAwesomeIcon icon={faUnity} />,
+            <Image className='my-1' src='./svg/c-sharp.svg' width={15} height={15} alt='c#' />,
+            <FontAwesomeIcon icon={faFigma} />,
+        ],
     },
 ];

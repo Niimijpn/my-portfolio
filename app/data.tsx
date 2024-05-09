@@ -34,6 +34,7 @@ export const skillsIcon = [
 export const projectData = [
     {
         title: '新美のポートフォリオ',
+        img: '/1.png',
         icon: faFolder,
         description: `新美のポートフォリオサイト。`,
         gitHubLink: '404',
@@ -43,11 +44,12 @@ export const projectData = [
             <FontAwesomeIcon icon={faHtml5} />,
             <FontAwesomeIcon icon={faCss3Alt} />,
             <FontAwesomeIcon icon={faJsSquare} />,
-            <Image className='my-2' src='./svg/next.svg' width={50} height={50} alt='next' />,
+            <Image className='my-1' src='./svg/next.svg' width={50} height={50} alt='next' />,
         ],
     },
     {
         title: '食べログ検索LINEボット',
+        img: '/2.png',
         icon: faLine,
         description: `食べログAPIを使用したLINEボット。
         現在地周辺の店舗情報取得やキーワード検索に対応。`,
@@ -55,12 +57,13 @@ export const projectData = [
         label: 'LineBOT',
         skills: [
             <FontAwesomeIcon icon={faJsSquare} />,
-            <Image className='' src='./svg/messagingapi.svg' width={30} height={30} alt='line-messaging-api' />,
+            <Image className='mt-[-3px]' src='./svg/messagingapi.svg' width={30} height={30} alt='line-messaging-api' />,
             
         ],
     },
     {
         title: 'ARお絵描き',
+        img: '/3.png',
         icon: faPencil,
         description: `MediaPipeを使用したお絵描きアプリ。
         画像認識により指の位置情報を取得。
@@ -71,6 +74,22 @@ export const projectData = [
         skills: [
             <FontAwesomeIcon icon={faPython} />,
             <Image className='' src='./svg/mediapipe.svg' width={25} height={25} alt='line-messaging-api' />,
+        ],
+    },
+    {
+        title: 'サークルのウェブサイト',
+        icon: faFolder,
+        description: `自身が所属するサークルのウェブサイト。
+        入学式に向けてウェブサイトが欲しいと頼まれ、個人で開発。`,
+        gitHubLink: 'https://github.com/CC-Circle/ccc-web',
+        label: 'Website',
+        img: '/4.png',
+        skills: [
+            <FontAwesomeIcon icon={faHtml5} />,
+            <FontAwesomeIcon icon={faCss3Alt} />,
+            <FontAwesomeIcon icon={faJsSquare} />,
+            <FontAwesomeIcon icon={faReact} />,
+            <Image className='my-2' src='./svg/next.svg' width={50} height={50} alt='next' />,
         ],
     },
     {
@@ -85,21 +104,6 @@ export const projectData = [
             <FontAwesomeIcon icon={faHtml5} />,
             <FontAwesomeIcon icon={faCss3Alt} />,
             <FontAwesomeIcon icon={faJsSquare} />,
-        ],
-    },
-    {
-        title: 'サークルのウェブサイト',
-        icon: faFolder,
-        description: `自身が所属するサークルのウェブサイト。
-        入学式に向けてウェブサイトが欲しいと頼まれ、個人で開発。`,
-        gitHubLink: 'https://github.com/CC-Circle/ccc-web',
-        label: 'Website',
-        skills: [
-            <FontAwesomeIcon icon={faHtml5} />,
-            <FontAwesomeIcon icon={faCss3Alt} />,
-            <FontAwesomeIcon icon={faJsSquare} />,
-            <FontAwesomeIcon icon={faReact} />,
-            <Image className='my-2' src='./svg/next.svg' width={50} height={50} alt='next' />,
         ],
     },
     {

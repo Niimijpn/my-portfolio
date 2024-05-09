@@ -13,27 +13,27 @@ export default function AccordionForDescription({
 }) {
     return (
         <>
-            <Accordion className='bg-[#1D1E20]'>
-                <AccordionSummary className='text-[#DADADB]'
-                    expandIcon={<ExpandMoreIcon className='text-[#DADADB]' />}
+            <Accordion className='bg-[#111]'>
+                <AccordionSummary className='text-[#8e8e8e]'
+                    expandIcon={<ExpandMoreIcon className='text-[#8e8e8e]' />}
                     aria-controls="panel1-content"
                     id="panel1-header"
                 >
                     作品の説明を表示
                 </AccordionSummary>
-                <AccordionDetails className='text-[#DADADB]'>
+                <AccordionDetails className='text-[#8e8e8e]'>
                     {description}
                 </AccordionDetails>
             </Accordion>
-            <Accordion className='bg-[#1D1E20]'>
-                <AccordionSummary className='text-[#DADADB]'
-                    expandIcon={<ExpandMoreIcon className='text-[#DADADB]' />}
+            <Accordion className='bg-[#111]'>
+                <AccordionSummary className='text-[#8e8e8e]'
+                    expandIcon={<ExpandMoreIcon className='text-[#8e8e8e]' />}
                     aria-controls="panel1-content"
                     id="panel1-header"
                 >
                     使用したスキルを表示
                 </AccordionSummary>
-                <AccordionDetails className='text-[#DADADB]'>
+                <AccordionDetails className='text-[#8e8e8e]'>
                     {skills}
                 </AccordionDetails>
             </Accordion>

@@ -1,19 +1,20 @@
 import * as React from 'react';
-import Timeline from '@mui/lab/Timeline';
+import Timeline, { timelineClasses } from '@mui/lab/Timeline';
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import { events } from '@/app/data';
+import { timeline } from '@/app/data';
 import ScrollAnimation from '@/app/ui/scrollAnimation';
+import { Typography } from '@mui/material';
 
 
-export default function About() {
+export default function TimeLine() {
   return (
     <>
       <div className='p-4'>
-        <h2 className='text-2xl font-semibold mb-4'>主なイベント</h2>
+        <Typography variant='h2' className='text-2xl font-semibold mb-4'>タイムライン</Typography>
         <Timeline
           sx={{
             [`& .${timelineItemClasses.root}:before`]: {
@@ -22,17 +23,17 @@ export default function About() {
             },
           }}
         >
-          {events.map((e) => (
+          {timeline.map((e) => (
             <TimelineItem key={e.id}>
               <TimelineSeparator>
                 <TimelineDot />
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
-                <h1>{e.title}</h1>
-                <p>{e.date}</p>
+                <Typography variant='h4'>{e.title}</Typography>
+                <Typography variant='caption'>{e.date}</Typography>
                 <ScrollAnimation >
-                  <p>{e.description}</p>
+                <Typography variant='caption'>{e.description}</Typography>
                 </ScrollAnimation>
               </TimelineContent>
             </TimelineItem>

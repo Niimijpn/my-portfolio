@@ -17,7 +17,7 @@ export default function Navbar(){
                 </Link>
             </Typography>
             <Typography variant='button' className="">
-                <Link href='/projects'>
+                <Link href='/'>
                     プロジェクト
                 </Link>
             </Typography>

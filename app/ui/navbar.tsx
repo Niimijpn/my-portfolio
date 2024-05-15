@@ -1,23 +1,26 @@
+import { Typography } from "@mui/material";
 import Link from "next/link";
 
 export default function Navbar(){
     return (
-        <div className="w-2/5 flex justify-between items-center p-4 bg-[#1D1E20]">
-            <div className="text-lg font-bold">
+        <div className="w-4/5 flex justify-between items-center p-4 bg-[#1D1E20]">
+            <Typography variant='h4' className="">
                 <Link href='./'>
-                    新美のPortfolio
+                    <strong>
+                    新美のサイト
+                    </strong>
                 </Link>
-            </div>
-            <div className="text-md font-medium">
+            </Typography>
+            <Typography variant='button' className="">
                 <Link href='/about'>
-                    About
+                    私について
                 </Link>
-            </div>
-            <div className="text-md font-medium">
+            </Typography>
+            <Typography variant='button' className="">
                 <Link href='/projects'>
-                    Projects
+                    プロジェクト
                 </Link>
-            </div>
+            </Typography>
         </div>
     );
 }

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/app/ui/navbar";
 import Footer from "@/app/ui/footer";
-import { noto_sans_jp } from "@/app/ui/fonts";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import Head from "next/head";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "@/app/ui/typograhy";
 
 config.autoAddCss = false
 
@@ -22,13 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <>
+    <ThemeProvider theme={theme}>
     <html lang="jp">
-      <body className={`${noto_sans_jp.className}`}>
+      <body>
         <Navbar/>
         <main>{children}</main>
         <Footer/>
         </body>
     </html>
+    </ThemeProvider>
     </>
   );
 }

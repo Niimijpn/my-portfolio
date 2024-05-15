@@ -11,13 +11,24 @@ export const socialLinks = [
     { icon: faEnvelope, url: 'mailto:niimicomputergraphics@gmail.com', label: 'Email' }
 ];
 
+export const timeline = [
+    { id: 1, date: '2003-06-17', title: '誕生', description: '名古屋市で生まれる' },
+    { id: 2, date: '2019-04-01', title: '星城高校入学', description: 'カフェ巡りにハマる' },
+    { id: 3, date: '2022-04-01', title: '愛知工業大学入学', description: '初めてのプログラミング' },
+    { id: 4, date: '2024-03', title: 'フロントエンドに興味を持つ', description: '勉強開始！！' },
+    { id: 5, date: '2024-04', title: '友人たちと開発サークルを設立', description: 'Contents Creation Circleを設立' },
+];
+
 export const events = [
-    { id: 1, date: '2022-04-01', title: '大学入学', description: '愛知工業大学に入学' },
-    { id: 2, date: '2022-09-18', title: 'TOKYO GAME SHOW 2022に参加', description: '「Treasure Surfing」を出展' },
-    { id: 3, date: '2023-07-16', title: 'BitSummit 2023に参加', description: '「キューブでポン！」を出展' },
-    { id: 4, date: '2023-09', title: 'Civictech Challenge Cup 2023に参加', description: '食品ロス削減サービス「ベイベイ」を提案' },
-    { id: 5, date: '2023-09-22', title: 'TOKYO GAME SHOW 2023に参加', description: '「キューブでポン！」を出展' },
-    { id: 6, date: '2024-04', title: '友人たちと開発サークルを設立', description: 'Contents Creation Circleを設立' },
+    { id: 1, title: '東京ゲームショウ2022', description: '「Treaure Surfing」を出展' },
+    { id: 2, title: '東京ゲームショウ2023', description: '「キューブでポン！」を出展' },
+    { id: 3, title: 'BitSummit2023', description: '「キューブでポン！」を出展' },
+    { id: 4, title: 'Civictech Challenge Cup 2023', description: '「ベイベイ」を提案' },
+];
+
+export const positions = [
+    { id: 1, name: 'Contents Creation Circle　広報幹部', description: 'Contents Creation Circleを設立' },
+    { id: 2, name: 'TGS2024出展に向けたクロスメディア戦略プロジェクト　リーダー', description: 'Contents Creation Circleを設立' },
 ];
 
 export const skillsIcon = [
@@ -33,10 +44,10 @@ export const skillsIcon = [
 
 export const projectData = [
     {
-        title: '新美のポートフォリオ',
+        title: '新美のサイト',
         img: '/1.png',
         icon: faFolder,
-        description: `新美のポートフォリオサイト。`,
+        description: `ポートフォリオサイト。`,
         gitHubLink: '404',
         label: 'Website',
         skills: [

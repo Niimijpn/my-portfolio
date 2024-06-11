@@ -1,7 +1,9 @@
+import Scrapbox from "@/components/scrapbox";
+
 export default function Page() {
   return (
     <div>
-      <h1>Page</h1>
+      <Scrapbox />
     </div>
   );
 }

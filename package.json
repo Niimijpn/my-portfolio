@@ -1,5 +1,5 @@
 {
-  "name": "todo-list",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,6 +19,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.379.0",
     "next": "14.2.3",
+    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.3.0",

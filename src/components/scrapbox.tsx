@@ -9,6 +9,7 @@ import {
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
+import Link from "next/link";
 import React from "react";
 
 const queryClient = new QueryClient();
@@ -85,6 +86,11 @@ function Page() {
         .map(
           (line: { text: string }) => line.text.length > 0 && <p>{line.text}</p>
         )}
+
+      <p>This page information is obtained from the Scrapbox API.</p>
+      <Link href="https://scrapbox.io/toB-no-nikki/">
+        https://scrapbox.io/toB-no-nikki/
+      </Link>
     </main>
   );
 }

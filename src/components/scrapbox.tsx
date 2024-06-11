@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-console */
 // page.tsx
 
@@ -80,10 +81,9 @@ function Page() {
   return (
     <main className="flex flex-col items-center justify-between p-24">
       {data.lines
-        .filter((line: Scrapbox["lines"]) => !line.text.includes("["))
+        .filter((line: { text: string }) => !line.text.includes("["))
         .map(
-          (line: Scrapbox["lines"]) =>
-            line.text.length > 0 && <p>{line.text}</p>
+          (line: { text: string }) => line.text.length > 0 && <p>{line.text}</p>
         )}
     </main>
   );

@@ -2,6 +2,7 @@ import "@/app/globals.css";
 import { Inter as FontSans } from "next/font/google";
 
 import React from "react";
+import Nav from "./nav";
 import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
@@ -23,6 +24,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <Nav />
         {children}
       </body>
     </html>

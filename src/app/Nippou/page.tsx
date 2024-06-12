@@ -65,6 +65,7 @@ function Page() {
             .filter((item: { title: string; image: string }) =>
               item.title.includes("日報")
             )
+            .toReversed()
             .map(
               (item: { title: string; image: string }) =>
                 item.title.length > 0 && (

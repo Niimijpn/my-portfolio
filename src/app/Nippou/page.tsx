@@ -13,6 +13,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 // import { Scrapbox } from "./ui/interface";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 const queryClient = new QueryClient();
 
@@ -42,30 +51,45 @@ function Page() {
   //   console.log(data);
 
   return (
-    <div>
-      {data
-        .filter((item: { title: string; image: string }) =>
-          item.title.includes("日報")
-        )
-        .map(
-          (item: { title: string; image: string }) =>
-            item.title.length > 0 && (
-              <Link
-                className="p-4"
-                href={`https://scrapbox.io/toB-no-nikki/${item.title}`}
-              >
-                <div className="flex items-center justify-center">
-                  <Image
-                    alt="nippou"
-                    height={100}
-                    src={`${item.image}`}
-                    width={100}
-                  />
-                  <h1>{item.title}</h1>
-                </div>
-              </Link>
+    <div className="px-20">
+      <Table className="">
+        <TableCaption>Nippou</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Visual</TableHead>
+            <TableHead className="">Title</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {data
+            .filter((item: { title: string; image: string }) =>
+              item.title.includes("日報")
             )
-        )}
+            .map(
+              (item: { title: string; image: string }) =>
+                item.title.length > 0 && (
+                  <TableRow>
+                    <TableCell className="">
+                      <Image
+                        alt="nippou"
+                        height={100}
+                        src={`${item.image}`}
+                        width={100}
+                      />
+                    </TableCell>
+                    <TableCell>
+                      <Link
+                        className="p-10 pl-0"
+                        href={`https://scrapbox.io/toB-no-nikki/${item.title}`}
+                      >
+                        {item.title}
+                      </Link>
+                    </TableCell>
+                  </TableRow>
+                )
+            )}
+        </TableBody>
+      </Table>
     </div>
   );
 }

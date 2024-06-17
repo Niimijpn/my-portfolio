@@ -1,6 +1,5 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable no-console */
-// page.tsx
 
 "use client";
 

@@ -9,7 +9,6 @@ import {
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
-import Link from "next/link";
 import React from "react";
 // import { Scrapbox } from "./ui/interface";
 
@@ -43,16 +42,10 @@ function Page() {
   return (
     <div>
       {data.lines
-        .filter((line: { text: string }) => !line.text.includes("["))
+        .filter((line: { text: string }) => !line.text.includes("https://"))
         .map(
           (line: { text: string }) => line.text.length > 0 && <p>{line.text}</p>
         )}
-      <div className="text-center">
-        <p>This page information is obtained from the Scrapbox API.</p>
-        <Link href="https://scrapbox.io/toB-no-nikki/">
-          https://scrapbox.io/toB-no-nikki/
-        </Link>
-      </div>
     </div>
   );
 }

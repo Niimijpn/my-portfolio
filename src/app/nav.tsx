@@ -7,8 +7,11 @@ export default function Nav() {
         <Link className="text-lg font-bold" href="/">
           213
         </Link>
-        <Link className="text-sm" href="/Nippou">
+        <Link className="text-sm" href="/nippou">
           Nippou
+        </Link>
+        <Link className="text-sm" href="/projects">
+          Projects
         </Link>
       </div>
     </nav>

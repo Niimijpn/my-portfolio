@@ -4,11 +4,11 @@ import prisma from "@/lib/utils";
 
 // 一覧を取得する
 export async function GET() {
-  const posts = await prisma.post.findMany();
+  const projects = await prisma.project.findMany();
 
-  const formattedPosts = posts.map((post) => ({
-    ...post,
-    createdAt: new Date(post.createdAt).toLocaleDateString("ja-JP", {
+  const formattedPosts = projects.map((project) => ({
+    ...project,
+    createdAt: new Date(project.createdAt).toLocaleDateString("ja-JP", {
       year: "numeric",
       month: "2-digit",
       day: "2-digit",

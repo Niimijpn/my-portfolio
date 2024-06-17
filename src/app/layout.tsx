@@ -2,6 +2,7 @@ import "@/app/globals.css";
 import { Inter as FontSans } from "next/font/google";
 
 import React from "react";
+import Footer from "./footer";
 import Nav from "./nav";
 import { cn } from "@/lib/utils";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

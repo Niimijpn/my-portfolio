@@ -10,7 +10,7 @@ const handler = async () => {
     throw new Error(`Failed to fetch: ${res.status}`);
   }
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
 
   return NextResponse.json(data);
 };

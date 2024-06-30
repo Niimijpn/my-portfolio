@@ -6,11 +6,7 @@ import Projects from "@/components/elements/projects";
 import Provider from "@/layouts/providers";
 
 function Page() {
-  const {
-    data = [],
-    isLoading,
-    error,
-  } = useQuery({
+  const { data = [], status } = useQuery({
     queryKey: ["projects"],
     queryFn: async () => {
       const response = await fetch("/api/prisma", {
@@ -25,8 +21,13 @@ function Page() {
     },
   });
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>An error occurred: {error.message}</div>;
+  if (status === "pending") {
+    return (
+      <div className="flex h-lvh items-center justify-center text-black">
+        Loadnig...
+      </div>
+    );
+  }
 
   return (
     <main className="flex flex-col items-center justify-between p-24">

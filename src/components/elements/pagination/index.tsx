@@ -25,7 +25,7 @@ const Pagination: React.FC<PaginationProps> = ({
   };
 
   return (
-    <div className="flex justify-around p-10">
+    <div className="flex justify-around p-10 pl-0">
       <button onClick={decrementPageNumber}>Previous</button>
       <button onClick={incrementPageNumber}>Next</button>
     </div>

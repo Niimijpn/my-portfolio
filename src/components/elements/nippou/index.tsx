@@ -19,32 +19,38 @@ const CustomTable: React.FC<TableProps> = ({ items }) => {
   }
 
   return (
-    <Table className="">
-      <TableBody>
-        {items.map((item) =>
-          item.title.length > 0 ? (
-            <TableRow key={item.title}>
-              <TableCell className="">
-                <Image
-                  alt="nippou"
-                  height={100}
-                  src={`${item.image}`}
-                  width={100}
-                />
-              </TableCell>
-              <TableCell>
-                <Link
-                  className="p-10 pl-0"
-                  href={`https://scrapbox.io/toB-no-nikki/${item.title}`}
-                >
-                  {item.title}
-                </Link>
-              </TableCell>
-            </TableRow>
-          ) : null
-        )}
-      </TableBody>
-    </Table>
+    <>
+      <Table className="">
+        <TableBody>
+          {items.map((item) =>
+            item.title.length > 0 ? (
+              <TableRow
+                key={item.title}
+                className="flex items-center justify-around"
+              >
+                <TableCell className="">
+                  <Image
+                    alt="nippou"
+                    height={100}
+                    src={`${item.image}`}
+                    width={100}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Link
+                    className="p-10 pl-0"
+                    href={`https://scrapbox.io/toB-no-nikki/${item.title}`}
+                  >
+                    {item.title}
+                  </Link>
+                </TableCell>
+              </TableRow>
+            ) : null
+          )}
+        </TableBody>
+      </Table>
+      <hr />
+    </>
   );
 };
 

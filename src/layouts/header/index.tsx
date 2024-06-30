@@ -7,6 +7,9 @@ export default function Page() {
         <Link className="text-lg font-bold" href="/">
           213
         </Link>
+        <Link className="text-sm" href="/resume">
+          Resume
+        </Link>
         <Link className="text-sm" href="/nippou">
           Nippou
         </Link>

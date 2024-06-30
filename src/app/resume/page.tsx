@@ -4,16 +4,15 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import Image from "next/image";
 import Profile from "@/components/elements/print";
 import { Skeleton } from "@/components/ui/skeleton";
 import Provider from "@/layouts/providers";
 
 function Page() {
   const { data = [], status } = useQuery({
-    queryKey: ["profile"],
+    queryKey: ["resume"],
     queryFn: async () => {
-      const response = await fetch("/api/profile", {
+      const response = await fetch("/api/resume", {
         cache: "no-cache",
       });
 
@@ -27,7 +26,7 @@ function Page() {
 
   if (status === "pending") {
     const skeletons = [];
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 13; i += 1) {
       skeletons.push(
         <Skeleton key={i} className="my-2 h-[20px] w-full rounded-full" />
       );
@@ -42,7 +41,6 @@ function Page() {
 const App = () => (
   <main className="flex flex-col items-center justify-between p-24">
     <div>
-      <Image alt="Niimi Logo" height={400} src="/icon.png" width={400} />
       <Provider>
         <Page />
       </Provider>

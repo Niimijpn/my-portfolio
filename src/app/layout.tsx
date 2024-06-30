@@ -1,9 +1,9 @@
-import "@/app/globals.css";
+import "@/styles/tailwind.css";
 import { Inter as FontSans } from "next/font/google";
 
 import React from "react";
-import Footer from "./footer";
-import Nav from "./nav";
+import Footer from "@/components/global/footer";
+import Header from "@/components/global/header";
 import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
@@ -25,7 +25,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Nav />
+        <Header />
         {children}
         <Footer />
       </body>

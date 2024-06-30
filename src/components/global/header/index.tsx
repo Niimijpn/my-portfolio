@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Nav() {
+export default function Page() {
   return (
     <nav className="flex items-center justify-between bg-white p-4 shadow-md">
       <div className="flex items-center space-x-4">

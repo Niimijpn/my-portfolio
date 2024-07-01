@@ -2,14 +2,13 @@
 
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import Projects from "@/components/elements/projects";
 import Provider from "@/layouts/providers";
 
 function Page() {
   const { data = [], status } = useQuery({
-    queryKey: ["projects"],
+    queryKey: ["exhibition"],
     queryFn: async () => {
-      const response = await fetch("/api/projects", {
+      const response = await fetch("/api/exhibition", {
         cache: "no-cache",
       });
 
@@ -30,9 +29,16 @@ function Page() {
   }
 
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <Projects data={data} />
-    </main>
+    <div className="p-24">
+      <h1 className="p-4 pl-0 text-3xl font-bold">出展・参加</h1>
+      {data.map(
+        (exhibition: { id: string; title: string; createdAt: number }) => (
+          <div key={exhibition.id} className="mb-8">
+            <h2 className="text-2xl">{exhibition.title}</h2>
+          </div>
+        )
+      )}
+    </div>
   );
 }
 

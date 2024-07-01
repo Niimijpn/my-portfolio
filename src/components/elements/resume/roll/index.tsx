@@ -2,14 +2,13 @@
 
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import Projects from "@/components/elements/projects";
 import Provider from "@/layouts/providers";
 
 function Page() {
   const { data = [], status } = useQuery({
-    queryKey: ["projects"],
+    queryKey: ["roll"],
     queryFn: async () => {
-      const response = await fetch("/api/projects", {
+      const response = await fetch("/api/roll", {
         cache: "no-cache",
       });
 
@@ -30,9 +29,14 @@ function Page() {
   }
 
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <Projects data={data} />
-    </main>
+    <div className="p-24 text-left">
+      <h1 className="p-4 pl-0 text-3xl font-bold">役割</h1>
+      {data.map((roll: { id: string; title: string }) => (
+        <div key={roll.id} className="mb-8">
+          <h2 className="text-2xl">{roll.title}</h2>
+        </div>
+      ))}
+    </div>
   );
 }
 

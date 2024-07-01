@@ -1,51 +1,14 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-console */
-
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
-import Profile from "@/components/elements/print";
-import { Skeleton } from "@/components/ui/skeleton";
-import Provider from "@/layouts/providers";
+import React from "react";
+import Exhibition from "@/components/elements/resume/exhibition";
+import Roll from "@/components/elements/resume/roll";
 
-function Page() {
-  const { data = [], status } = useQuery({
-    queryKey: ["resume"],
-    queryFn: async () => {
-      const response = await fetch("/api/resume", {
-        cache: "no-cache",
-      });
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      return response.json();
-    },
-  });
-
-  if (status === "pending") {
-    const skeletons = [];
-    for (let i = 0; i < 13; i += 1) {
-      skeletons.push(
-        <Skeleton key={i} className="my-2 h-[20px] w-full rounded-full" />
-      );
-    }
-
-    return <div>{skeletons}</div>;
-  }
-
-  return <Profile data={data} />;
+export default function Page() {
+  return (
+    <main className="p-24">
+      <Exhibition />
+      <Roll />
+    </main>
+  );
 }
-
-const App = () => (
-  <main className="flex flex-col items-center justify-between p-24">
-    <div>
-      <Provider>
-        <Page />
-      </Provider>
-    </div>
-  </main>
-);
-
-export default App;

@@ -29,12 +29,12 @@ function Page() {
   }
 
   return (
-    <div className="p-24">
-      <h1 className="p-4 pl-0 text-3xl font-bold">出展・参加</h1>
+    <div className="p-12">
+      <h1 className="p-4 pl-0 text-2xl font-bold">出展・参加</h1>
       {data.map(
         (exhibition: { id: string; title: string; createdAt: number }) => (
-          <div key={exhibition.id} className="mb-8">
-            <h2 className="text-2xl">{exhibition.title}</h2>
+          <div key={exhibition.id} className="">
+            <h2 className="">{exhibition.title}</h2>
           </div>
         )
       )}

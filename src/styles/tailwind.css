@@ -1,0 +1,16 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+body {
+  background-color: #fff;
+  color: #555;
+  padding: 0 10dvw;
+  padding-bottom: 5dvw;
+}

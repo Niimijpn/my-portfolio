@@ -10,7 +10,7 @@ const handler = async (request: Request, context: { params: Params }) => {
   const id = context.params.id as string;
   const projects = await prisma.project.findUnique({
     where: {
-      id,
+      id: Number(id),
     },
   });
 
